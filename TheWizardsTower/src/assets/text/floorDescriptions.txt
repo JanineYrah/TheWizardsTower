@@ -1,0 +1,33 @@
+<-- FLOOR 1: HELL -->
+
+"Abandon hope all ye who enter here..." For everyone who have dared to unwelcomely enter the Wizard's tower has never come out alive. Stay cautious and vigilant in the journey you are about to witness, and only wish that you have truly made the right decision.
+
+<-- FLOOR 1: HELL END -->
+
+
+<-- FLOOR 2: LIMBO -->
+
+The sight of light above and the fiery pits below makes you weary of every step you take. The Limbo Floor will not let you get away from the crutches of the hell below so easily... and it will do whatever it takes to prevent you from advancing further.
+
+<-- FLOOR 2: LIMBO END -->
+
+
+<-- FLOOR 3: EARTH -->
+
+A familiar world now infused with poisonous gas that degrades your health and weapon durability, and organisms now turned into unrecognizable monsters... The beauty of the Wizard's garden floor has taken to defending itself, alerted by your presence.
+
+<-- FLOOR 3: EARTH END -->
+
+
+<-- FLOOR 4: SKY -->
+
+Serenity and euphoria, the blue skies and fluffy clouds greet you with open arms. Your mind begins to wander towards its warm embrace. However, wayward soul, you must always keep your guard... Is it really as serendipitous as you think?
+
+<-- FLOOR 4: SKY END -->
+
+
+<-- FLOOR 5: COSMOS -->
+
+You feel your feet lifting away from the effects of gravity, as an entirely different world is displayed in front of your eyes. In the Wizard's domain, be prepared. Will you be able to beat his army of every enemy and entity you have met thus far?
+
+<-- FLOOR 5: COSMOS END -->
