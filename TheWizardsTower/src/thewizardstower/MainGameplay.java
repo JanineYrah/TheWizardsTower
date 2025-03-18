@@ -1,6 +1,7 @@
 //Game Menu Screen Maker
 package thewizardstower;
 
+import thewizardstower.controller
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.LineBorder;
