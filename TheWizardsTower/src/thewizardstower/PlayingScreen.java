@@ -4,7 +4,7 @@
  */
 package thewizardstower;
 
-import thewizardstower.controller
+import thewizardstower.controller;
 import entity.Player;
 import javax.swing.*;
 import java.awt.*;
