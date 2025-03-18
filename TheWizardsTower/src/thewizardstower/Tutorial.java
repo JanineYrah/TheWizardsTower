@@ -5,6 +5,8 @@
  */
 package thewizardstower;
 
+import thewizardstower.controller;
+
 /**
  *
  * @author janineyrahtolentino
