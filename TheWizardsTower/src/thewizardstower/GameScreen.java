@@ -4,7 +4,7 @@
  */
 package thewizardstower;
 
-import thewizardstower.controller
+import thewizardstower.controller;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
