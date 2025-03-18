@@ -1,4 +1,4 @@
-package q3aa3_tau_alcayde.tolentino.gui;
+package thewizardstower;
 
 
 import javax.swing.JFrame;
