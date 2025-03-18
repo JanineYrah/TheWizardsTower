@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package thewizardstower;
+
+import thewizardstower.controller
 import entity.Player;
 import javax.swing.*;
 import java.awt.*;
