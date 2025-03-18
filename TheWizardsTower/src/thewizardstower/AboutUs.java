@@ -7,6 +7,7 @@ package thewizardstower;
 
 import javax.swing.*;
 import java.awt.*;
+import thewizardstower.controller
 
 /**
  *
