@@ -17,12 +17,17 @@ public class MainMenuSettingsController implements MouseListener {
     private JFrame settings;
     private JSlider volume, soundFX;
     private JButton save, back;
+    private JRadioButton easy, medium, hard;
     private int confirmChoice;
     
-    public MainMenuSettingsController(JFrame settings, JSlider volume, JSlider soundFX, JButton back, JButton save) {
+    public MainMenuSettingsController(JFrame settings, JSlider volume, JSlider soundFX,
+            JRadioButton easy, JRadioButton medium, JRadioButton hard, JButton save, JButton back) {
         this.settings = settings;
         this.volume = volume;
         this.soundFX = soundFX;
+        this.easy = easy;
+        this.medium = medium;
+        this.hard = hard;
         this.save = save;
         this.back = back;
     }
