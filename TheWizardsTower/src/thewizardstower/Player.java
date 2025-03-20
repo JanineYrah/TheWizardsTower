@@ -3,12 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-/**
- * This class represents the player character class.
- * @author Itzle
- * @version 1.0
- */
-
 package thewizardstower;
 
 import java.awt.Color;
@@ -19,8 +13,8 @@ import javax.imageio.ImageIO;
 import thewizardstower.controller.KeyHandler;
 
 /**
- *
- * @author Itzle Alcayde
+ * This class represents the player character class.
+ * @author Itzle
  */
 public class Player extends Entity {
 
@@ -28,7 +22,7 @@ public class Player extends Entity {
      * Sets the current status of the player such as game movement, current key handler and playing screen.
      * @param ps The playing screen where the player character is placed and able to play.
      * @param keyh Key handler for the player character that allows them to perform basic movement in the game.
-     * @return Sum of a and b
+     * @param g2 Is a Graphics2D parameter that allows the Player character sprite image to be updated.
      */
     
     PlayingScreen ps;
