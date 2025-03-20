@@ -20,9 +20,6 @@ public class Player extends Entity {
 
     /**
      * Sets the current status of the player such as game movement, current key handler and playing screen.
-     * @param ps The playing screen where the player character is placed and able to play.
-     * @param keyh Key handler for the player character that allows them to perform basic movement in the game.
-     * @param g2 Is a Graphics2D parameter that allows the Player character sprite image to be updated.
      */
     
     PlayingScreen ps;
@@ -32,6 +29,13 @@ public class Player extends Entity {
     private int jumpStrength = 10;
     private int gravity = 1;
     private int jumpVelocity = 0;
+
+     /**
+     * @param ps The playing screen where the player character is placed and able to play.
+     * @param keyh Key handler for the player character that allows them to perform basic movement in the game.
+     * @return This constructs a new player that belongs in a playing screen and has a keyhandler.
+     * @param g2 Is a Graphics2D parameter that allows the Player character sprite image to be updated
+     */
     
     public Player(PlayingScreen ps, KeyHandler keyh){
         this.ps = ps;
@@ -39,6 +43,11 @@ public class Player extends Entity {
         setDefaultValues();
         getPlayerImage();
     }
+
+     /**
+     * This sets the default stats and position of the player's caracter.
+     * @return This returns the default set values of the player's position, speed and direction.
+     */
     
     public void setDefaultValues(){
         x = 100;
@@ -46,6 +55,11 @@ public class Player extends Entity {
         speed = 2;
         direction = "down";
     }
+
+    /**
+     * This method gets the image files of the player character sprite from the assets folder to use them in the following methods.
+     * @return Returns the player image from the assets folder that contains the image sprites of the player/
+     */
     
     public void getPlayerImage(){
         try{
@@ -61,6 +75,11 @@ public class Player extends Entity {
             e.printStackTrace();
         }
     }
+
+    /**
+     * This method allows the player to update their movemend based on the key that they pressed, that can change speed and direction.
+     * @return Returns updates to the keyhadler if the player has pressed keys on their keboard, and updates the player character's movement.
+     */
     
     public void update(){
         
@@ -112,6 +131,12 @@ public class Player extends Entity {
             }
         }
     }
+
+    /**
+     * This allows the sprite images of the player to be drawn and changed to create moving animations and directions based on the key that they pressed.
+     * @param g2 Is a Graphics2D parameter that allows the Player character sprite image to be updated
+     * @return Reutrns and draws the correct immage sprite of the player character when it moves to different directions.
+     */
     
     public void draw(Graphics2D g2){
         //g2.setColor(Color.white);
