@@ -2,6 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
+/**
+ * This class represents the player character class.
+ * @author Itzle
+ * @version 1.0
+ */
+
 package thewizardstower;
 
 import java.awt.Color;
@@ -16,6 +23,14 @@ import thewizardstower.controller.KeyHandler;
  * @author Itzle Alcayde
  */
 public class Player extends Entity {
+
+    /**
+     * Sets the current status of the player such as game movement, current key handler and playing screen.
+     * @param ps The playing screen where the player character is placed and able to play.
+     * @param keyh Key handler for the player character that allows them to perform basic movement in the game.
+     * @return Sum of a and b
+     */
+    
     PlayingScreen ps;
     KeyHandler keyh;
     
