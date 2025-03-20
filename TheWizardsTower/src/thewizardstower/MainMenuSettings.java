@@ -17,7 +17,8 @@ public class MainMenuSettings extends JFrame {
     private JPanel titlePanel, sliderPanel, difficultyPanel, buttonPanel;
     private JLabel title, sounds, volumeTitle, soundFXTitle, difficulty;
     private JSlider volume, soundFX;
-    private JButton easy, medium, hard, save, back;
+    private JButton save, back;
+    private JRadioButton easy, medium, hard;
     private MainMenuSettingsController controller;
     private GridBagConstraints gbc = new GridBagConstraints();
 
@@ -114,32 +115,39 @@ public class MainMenuSettings extends JFrame {
         difficulty.setPreferredSize(new Dimension(600, 60));
         difficultyPanel.add(difficulty, gbc);
         
+       //buttons
+        JRadioButton easy = new JRadioButton();
+        easy.setText("Easy");
+        JRadioButton medium = new JRadioButton();
+        medium.setText("Medium");
+        JRadioButton hard = new JRadioButton();
+        hard.setText("Hard");
+        
+        //grouping buttons
+        ButtonGroup difficulties = new ButtonGroup();
+        difficulties.add(easy);
+        difficulties.add(medium);
+        difficulties.add(hard);
+                
+        //adding buttons
+        difficulties.add(easy);
+        difficulties.add(medium);
+        difficulties.add(hard);
+        
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.WEST;
-        easy = new JButton("Easy");
         easy.setPreferredSize(new Dimension(100, 40));
         difficultyPanel.add(easy, gbc);
         
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.CENTER;
-        medium = new JButton("Medium");
         medium.setPreferredSize(new Dimension(100, 40));
         difficultyPanel.add(medium, gbc);
         
         gbc.gridy = 1;
         gbc.anchor = GridBagConstraints.EAST;
-        hard = new JButton("Hard");
         hard.setPreferredSize(new Dimension(100, 40));
         difficultyPanel.add(hard, gbc);
-
-        /* Setting back and save buttons */
-        save = new JButton("Save");
-        save.setPreferredSize(new Dimension(100, 40));
-        buttonPanel.add(save);
- 
-        back = new JButton("Back");
-        back.setPreferredSize(new Dimension(100, 40));
-        buttonPanel.add(back);
 
         /* Adding panels into frame */
         this.getContentPane().add(titlePanel);
@@ -148,7 +156,7 @@ public class MainMenuSettings extends JFrame {
         this.getContentPane().add(buttonPanel);
 
         /* Adding controller */
-        controller = new MainMenuSettingsController(this, volume, soundFX, back, save);
+        controller = new MainMenuSettingsController(this, volume, soundFX, easy, medium, hard, back, save);
         volume.addMouseListener(controller);
         soundFX.addMouseListener(controller);
         easy.addMouseListener(controller);
