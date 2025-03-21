@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class MainMenu extends JFrame {
     private JLabel gameTitle, background;
-    private JButton newGameButton, continueGameButton, tutorialButton, settingsButton, aboutUsButton, quitButton;
+    private JButton newGameButton, continueGameButton, instructionsButton, settingsButton, aboutUsButton, quitButton;
     private JPanel backgroundPanel, titlePanel, menuPanel;
     private MainMenuController controller;
     private ImageIcon backgroundImage; //use testImage for testing
@@ -58,9 +58,9 @@ public class MainMenu extends JFrame {
         menuPanel.add(continueGameButton, gbc); //Adding to menuPanel
 
         gbc.gridy = 2;
-        tutorialButton = new JButton("How to Play"); //Tutorial
-        tutorialButton.setPreferredSize(new Dimension(200, 40));
-        menuPanel.add(tutorialButton, gbc); //Adding to menuPanel
+        instructionsButton = new JButton("How to Play"); //Tutorial
+        instructionsButton.setPreferredSize(new Dimension(200, 40));
+        menuPanel.add(instructionsButton, gbc); //Adding to menuPanel
 
         gbc.gridx = 0;
         gbc.gridy = 3;
@@ -100,12 +100,12 @@ public class MainMenu extends JFrame {
         this.getContentPane().add(menuPanel, BorderLayout.AFTER_LAST_LINE);
 
         /* Adding controller to components */
-        controller = new MainMenuController(this, newGameButton, continueGameButton, tutorialButton,
+        controller = new MainMenuController(this, newGameButton, continueGameButton, instructionsButton,
                                             settingsButton, aboutUsButton, quitButton);
         
         newGameButton.addMouseListener(controller);
         continueGameButton.addMouseListener(controller);
-        tutorialButton.addMouseListener(controller);
+        instructionsButton.addMouseListener(controller);
         settingsButton.addMouseListener(controller);
         aboutUsButton.addMouseListener(controller);
         quitButton.addMouseListener(controller);
