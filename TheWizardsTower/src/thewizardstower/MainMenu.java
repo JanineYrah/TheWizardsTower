@@ -58,7 +58,7 @@ public class MainMenu extends JFrame {
         menuPanel.add(continueGameButton, gbc); //Adding to menuPanel
 
         gbc.gridy = 2;
-        tutorialButton = new JButton("Tutorial"); //Tutorial
+        tutorialButton = new JButton("How to Play"); //Tutorial
         tutorialButton.setPreferredSize(new Dimension(200, 40));
         menuPanel.add(tutorialButton, gbc); //Adding to menuPanel
 
