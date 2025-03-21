@@ -149,6 +149,15 @@ public class MainMenuSettings extends JFrame {
         hard.setPreferredSize(new Dimension(100, 40));
         difficultyPanel.add(hard, gbc);
 
+        /* Setting back and save buttons */
+        save = new JButton("Save");
+        save.setPreferredSize(new Dimension(100, 40));
+        buttonPanel.add(save);
+ 
+        back = new JButton("Back");
+        back.setPreferredSize(new Dimension(100, 40));
+        buttonPanel.add(back);
+
         /* Adding panels into frame */
         this.getContentPane().add(titlePanel);
         this.getContentPane().add(sliderPanel);
@@ -162,8 +171,8 @@ public class MainMenuSettings extends JFrame {
         easy.addMouseListener(controller);
         medium.addMouseListener(controller);
         hard.addMouseListener(controller);
-        back.addMouseListener(controller);
         save.addMouseListener(controller);
+        back.addMouseListener(controller);
         
         this.setVisible(true);
     }
