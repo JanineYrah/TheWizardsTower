@@ -26,7 +26,7 @@ public class AboutUs extends JFrame {
         super("About Us");
         this.setSize(1080, 720);
         this.setLayout(new BorderLayout());
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         
         /* Setting NamePanel */
         this.namePanel = new JPanel();
