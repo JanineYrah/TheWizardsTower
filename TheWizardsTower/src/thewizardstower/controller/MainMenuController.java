@@ -47,9 +47,9 @@ public class MainMenuController implements MouseListener {
             //savedSelectionScreen.setVisible(true);            
         }
         if (e.getSource() == tutorial) {
-            //JFrame tutorialScreen = new Tutorial(); //Input subject to display into new subject details screen
+            //JFrame instructionsScreen = new Instructions(); //Input subject to display into new subject details screen
             mainMenu.dispose();
-            //tutorialScreen.setVisible(true);            
+            //instructionsScreen.setVisible(true);            
         }        
         if (e.getSource() == settings) {
             JFrame settingsScreen = new MainMenuSettings(); //Input subject to display into new subject details screen
