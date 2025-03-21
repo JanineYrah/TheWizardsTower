@@ -16,7 +16,7 @@ public class LevelSelection extends JFrame {
         /* DISPLAY */
         super("Select a level");
         this.setSize(1080, 720);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         
         /* setting up container */
         container = new JPanel(new FlowLayout());
