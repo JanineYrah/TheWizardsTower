@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * This class represents the player character class.
+ * This class represents the floor class.
  * @author Yrah
  */
 public class Floor {
