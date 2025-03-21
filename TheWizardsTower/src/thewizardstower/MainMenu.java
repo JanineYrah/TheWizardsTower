@@ -18,7 +18,7 @@ public class MainMenu extends JFrame {
         super("The Wizard's Tower Main Menu");
         this.setSize(1080, 720);
         this.setLayout(new BorderLayout());
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
         /* Setting backgroundPanel */
         this.backgroundPanel = new JPanel();
