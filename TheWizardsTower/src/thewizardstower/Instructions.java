@@ -5,12 +5,12 @@
  */
 package thewizardstower;
 
-import thewizardstower.controller.TutorialController;
+import thewizardstower.controller.InstructionsController;
 
 /**
  *
  * @author janineyrahtolentino
  */
-public class Tutorial {
+public class Instructions {
     
 }
