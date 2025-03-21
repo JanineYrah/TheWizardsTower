@@ -10,25 +10,21 @@ import javax.swing.*;
 import java.util.*;
 import thewizardstower.*;
 
-//import q3aa3_tau_alcayde.tolentino.files.*;
-//import q3aa3_tau_alcayde.tolentino.resources.*;
-//import q3aa3_tau_alcayde.tolentino.test.*;
-
 /**
  *
  * @author janineyrahtolentino
  */
 public class MainMenuController implements MouseListener {
     private JFrame mainMenu;
-    private JButton newGame, continueGame, tutorial, settings, aboutUs, quit;
+    private JButton newGame, continueGame, instructions, settings, aboutUs, quit;
     private int page, maxPage, confirmChoice;
     
-    public MainMenuController(JFrame mainMenu, JButton newGame, JButton continueGame, JButton tutorial, JButton settings,
+    public MainMenuController(JFrame mainMenu, JButton newGame, JButton continueGame, JButton instructions, JButton settings,
                               JButton aboutUs, JButton quit) {
         this.mainMenu = mainMenu;
         this.newGame = newGame;
         this.continueGame = continueGame;
-        this.tutorial = tutorial;
+        this.instructions = instructions;
         this.settings = settings;
         this.aboutUs = aboutUs;
         this.quit = quit;
@@ -37,8 +33,14 @@ public class MainMenuController implements MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == newGame) {
-            //JFrame levelSelectionScreen = new LevelSelection("Weee", "Weeee"); //Input subject to display into new subject details screen
+            /* [TEMPORARY] for showing game screen */
+            JFrame gameScreen = new GameScreen();
             mainMenu.dispose();
+            gameScreen.setVisible(true);  
+            
+            /* REAL INTENDED */
+            //JFrame levelSelectionScreen = new LevelSelection("Weee", "Weeee"); //Input subject to display into new subject details screen
+            //mainMenu.dispose();
             //levelSelectionScreen.setVisible(true);            
         }
         if (e.getSource() == continueGame) {
@@ -46,7 +48,7 @@ public class MainMenuController implements MouseListener {
             mainMenu.dispose();
             //savedSelectionScreen.setVisible(true);            
         }
-        if (e.getSource() == tutorial) {
+        if (e.getSource() == instructions) {
             //JFrame instructionsScreen = new Instructions(); //Input subject to display into new subject details screen
             mainMenu.dispose();
             //instructionsScreen.setVisible(true);            
