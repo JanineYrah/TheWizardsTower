@@ -156,7 +156,7 @@ public class MainMenuSettings extends JFrame {
         this.getContentPane().add(buttonPanel);
 
         /* Adding controller */
-        controller = new MainMenuSettingsController(this, volume, soundFX, easy, medium, hard, back, save);
+        controller = new MainMenuSettingsController(this, volume, soundFX, easy, medium, hard, save, back);
         volume.addMouseListener(controller);
         soundFX.addMouseListener(controller);
         easy.addMouseListener(controller);
