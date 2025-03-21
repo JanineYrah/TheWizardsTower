@@ -30,7 +30,7 @@ public class GameScreen extends JFrame {
         application.setTitle("The Wizard's Tower");
         application.setSize(1080, 720);
         application.setLayout(new BorderLayout());
-        application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        application.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         application.setResizable(false);
         
        
