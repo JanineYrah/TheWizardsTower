@@ -27,7 +27,7 @@ public class MainMenuSettings extends JFrame {
         super("Settings");
         this.setSize(1080, 720);
         this.setLayout(new FlowLayout());
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         
         /* Setting NamePanel */
         this.titlePanel = new JPanel();
