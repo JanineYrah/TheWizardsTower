@@ -11,24 +11,49 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * This class represents the floor class.
+ * This class represents the floor class
  * @author Yrah
  */
 public class Floor {
-    
+
     /**
-     * Creates a new Floor level instant
+     * refers to the list of types of power elements involved in the level
      */
-    
     protected ArrayList<String> elementList;
+
+    /**
+     * refers to the list of characters currently found in the floor level
+     */
     protected ArrayList<Character> characterList;
+
+    /**
+     * refers to the list of enemies currently found in the floor level
+     */
     protected ArrayList<Enemy> enemyList;
-    protected String stage, description;
+
+    /**
+     * refers to the current stage of the floor
+     */
+    protected String stage,
+
+    /**
+     * refers to the given description to describe the level
+     */
+    description;
+
+    /**
+     * refers for the given name for the level
+     */
     protected static String name;
+
+    /**
+     * a boolean that determines if a floor has been conquered by the user or not
+     */
     protected boolean conquered;
     private static ArrayList<Floor> floorList = new ArrayList();
-    
+
     /**
+     * This constructor creates a new floor instant with the specified parameters.
      * @param name The name of the floor
      * @param description The given description for the floor
      * @param elementList The list of elements found in the floor, which dictates the type of items, weapons, and enemies found in the floor
@@ -163,7 +188,5 @@ public class Floor {
         
         String finalString = stringBuilder.toString();
         return finalString;
-    }
-    
-    
+    } 
 }
