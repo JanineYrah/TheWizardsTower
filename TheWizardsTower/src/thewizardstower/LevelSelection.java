@@ -7,86 +7,93 @@ import javax.swing.*;
 
 public class LevelSelection extends JFrame {
     
-    private JPanel container, levelImagePanel, levelSwitchingPanel, levelNamePanel, levelStartPanel, levelDescriptionPanel;
+    private JPanel container, levelImagePanel, levelNamePanel, levelStartPanel, levelDescriptionPanel;
     private LevelSelectionController controller;
     private JLabel levelImage, levelName, levelDescription;
-    private JButton previous, next, levelStart;
-    
-    //parameters in constructor are for display purposes. THIS WILL SOON BE REPLACED WITH CLASS FLOOR OBJECTS
-    public LevelSelection(/*ImageIcon levelImage, ImageIcon prev, ImageIcon nex,*/ String name, String description) {
+    private JButton previous, next, levelStart, back;
+
+    public LevelSelection() {
         /* DISPLAY */
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        super("Select a level");
         this.setSize(1080, 720);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         /* setting up container */
-        container = new JPanel(new GridLayout(4, 1, 10, 10)); //TO-DO: Change to gridbag formatting, fix sizing issues
-        this.add(container);
+        container = new JPanel(new FlowLayout());
+        container.setSize(1000, 720);
+        this.getContentPane().add(container);
         
         /* setting up panels and positions */
-        levelImagePanel = new JPanel(); //level image panel (for levelImage jlabel)
-        levelImagePanel.setPreferredSize(new Dimension(1000, 500));
+        levelImagePanel = new JPanel(new FlowLayout());
+        levelImagePanel.setPreferredSize(new Dimension(1000, 700));
         container.add(levelImagePanel);
         
-        levelNamePanel = new JPanel(); //level name panel (for levelName jlabel)
+        levelNamePanel = new JPanel(new FlowLayout());
+        levelNamePanel.setPreferredSize(new Dimension(400, 50));
         container.add(levelNamePanel);
         
-        levelStartPanel = new JPanel(); //level start panel (for levelStart jbutton)
+        levelStartPanel = new JPanel(new FlowLayout());
+        levelStartPanel.setPreferredSize(new Dimension(300, 50));
         container.add(levelStartPanel);
         
-        levelDescriptionPanel = new JPanel(); //level description panel (for levelDescription jlabel)
+        levelDescriptionPanel = new JPanel(new FlowLayout());
+        levelDescriptionPanel.setPreferredSize(new Dimension(700, 200));
         container.add(levelDescriptionPanel);
         
-        levelSwitchingPanel = new JPanel(); //level switching panel (for next and previous jbuttons) (TO DO: fix format later)
-        levelImagePanel.add(levelSwitchingPanel); //this panel is placed in the levelImagePanel
-        
-        
-        
-        //FOR DEBUGGING. REMOVE AS SOON AS FIXED
-        
-        levelImagePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
-        //levelNamePanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
-        //levelStartPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
-        //levelDescriptionPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
-        //levelSwitchingPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
- 
-        //END OF DEBUGGING SECTION
-        
-        
-        
-        
+
         /* setting up level IMAGE object/s */
+        levelImage = new JLabel();
+        
+        levelImagePanel.add(levelImage);
         
         
         
         
         /* setting up leve NAME object/s */
-        levelName = new JLabel(name);
-        levelName.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 27));
-        levelName.setAlignmentX(Component.CENTER_ALIGNMENT);
-        levelNamePanel.add(levelName);
+        levelName = new JLabel();
         
+        levelNamePanel.add(levelImage);
         
         
         /* setting up level START object/s */
+        levelStart = new JButton();
         
-        
-        
+        levelStartPanel.add(levelImage);
         
         
         /* setting up level DESCRIPTION object/s */
-        levelDescription = new JLabel(description);
-        levelDescription.setFont(new Font(Font.SANS_SERIF, Font.ITALIC, 15));
-        levelDescription.setAlignmentX(Component.CENTER_ALIGNMENT);
-        levelNamePanel.add(levelDescription);
+        levelDescription = new JLabel();
+        
+        levelDescriptionPanel.add(levelImage);
 
-        /* setting up level SWITCHING object/s */
         
         
+        
+        /* setting up level SWITCHING object/s (next and prev) */
+        previous = new JButton("Prev");
+        previous.setPreferredSize(new Dimension(100, 40));
+        this.add(previous);
+        
+        next = new JButton("Next");
+        next.setPreferredSize(new Dimension(100, 40));
+        this.add(next);
 
+        /* setting up back object */
+        back = new JButton("Back");
+        back.setPreferredSize(new Dimension(100, 40));
+        this.add(back);
+
+        
+        
+        
+        
         /* CONTROLLER STARTS HERE */
-        
-        
-        
+        controller = new LevelSelectionController(this, levelImage, levelName, levelDescription, previous, next, levelStart, back);
+        previous.addActionListener(controller);
+        next.addActionListener(controller);
+        levelStart.addActionListener(controller);
+        back.addActionListener(controller);
+
         /* for visibility */
         this.setResizable(false);
         this.setVisible(true);
