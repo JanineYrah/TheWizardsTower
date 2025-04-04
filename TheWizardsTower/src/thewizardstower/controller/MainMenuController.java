@@ -9,6 +9,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 import thewizardstower.*;
+import thewizardstower.Instructions;
 
 /**
  *
@@ -32,21 +33,31 @@ public class MainMenuController implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if (e.getSource() == newGame) {  
-            JFrame levelSelectionScreen = new LevelSelection();
-            mainMenu.dispose();
-            levelSelectionScreen.setVisible(true);            
-        }
-        if (e.getSource() == continueGame) {
+        if (e.getSource() == newGame) {
             /* [TEMPORARY] for showing game screen */
             JFrame gameScreen = new GameScreen();
             mainMenu.dispose();
-            gameScreen.setVisible(true);          
+            gameScreen.setVisible(true);  
+            
+            /* REAL INTENDED */
+            //JFrame levelSelectionScreen = new LevelSelection("Weee", "Weeee"); //Input subject to display into new subject details screen
+            //mainMenu.dispose();
+            //levelSelectionScreen.setVisible(true);            
+        }
+        if (e.getSource() == continueGame) {
+            //JFrame savedSelectionScreen = new SavedGamesSelection(); //Input subject to display into new subject details screen
+            mainMenu.dispose();
+            //savedSelectionScreen.setVisible(true); 
+            JFrame gameScreen = new GameScreen();
+            gameScreen.setVisible(true); 
         }
         if (e.getSource() == instructions) {
             //JFrame instructionsScreen = new Instructions(); //Input subject to display into new subject details screen
             mainMenu.dispose();
-            //instructionsScreen.setVisible(true);            
+            //instructionsScreen.setVisible(true);     
+            JFrame instructionsScreen = new Instructions();
+            instructionsScreen.setVisible(true);
+            
         }        
         if (e.getSource() == settings) {
             JFrame settingsScreen = new MainMenuSettings(); //Input subject to display into new subject details screen
@@ -85,4 +96,6 @@ public class MainMenuController implements MouseListener {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+}
+
 }
