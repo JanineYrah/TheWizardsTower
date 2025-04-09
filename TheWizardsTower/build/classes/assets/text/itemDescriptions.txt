@@ -1,0 +1,24 @@
+<-- ITEMS -->
+
+<text>
+
+
+
+<-- ITEMS END -->
+
+<-- WEAPONS -->
+
+<text>
+
+
+<-- WEAPONS END -->
+
+<-- POTIONS -->
+
+<text>
+
+
+
+
+
+<-- POTIONS END -->
