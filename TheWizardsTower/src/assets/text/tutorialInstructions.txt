@@ -1,0 +1,32 @@
+<-- BASIC MOVEMENTS -->
+
+
+
+
+
+<-- BASIC MOVEMENTS ENDS -->
+
+
+Good job! You've learned the basic movements (Press SPACE to continue)
+Let's try some more basic player actions.
+
+<-- ITEM MANIPULATION -->
+
+
+
+
+<-- ITEM MANIPULATION END -->
+
+Nice one! Let's try more advanced combinations of movements, that would be helpful in your journey.
+
+<-- ADVANCED MOVEMENTS -->
+
+
+
+
+
+
+
+<-- ADVANCED MOVEMENTS END -->
+
+Congratulations! Feel free to replay this tutorial for extra aid in your gameplay :) (Press SPACE to exit)
